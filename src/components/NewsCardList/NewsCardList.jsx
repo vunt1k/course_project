@@ -11,12 +11,18 @@ const NewsCardList = () => {
     <Grid 
       container
       direction="row"
-      spacing={2}>
-        <Grid item xs={6} lg={5}>
+      spacing={3}>
+        <Grid item xs={12} sm={6} lg={5}>
           <NewsCard/>
         </Grid>
-        <Grid item xs={6} lg={5}>
-            <NewsCard/>
+        <Grid item xs={12} sm={6} lg={5}>
+          <NewsCard/>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={5}>
+          <NewsCard/>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={5}>
+          <NewsCard/>
         </Grid>
     </Grid>
   )
