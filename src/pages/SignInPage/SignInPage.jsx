@@ -13,24 +13,24 @@ const useStyles = makeStyles(theme => {
   return {
     card: {
       width: '40%',
-      height: '40%',
+      height: 'auto',
       padding: 0,
       minWidth: '300px',
       boxShadow: 'none',
       border: '1px solid #cccfd2',
-      borderRadius: '8px'
+      borderRadius: '8px',
     },
 
     media: {
       fontFamily: 'roboto',
       background: '#f2f3f3',
-      height: '22%',
+      height: '80px',
       display: 'flex',
       alignItems: 'center',
       paddingLeft: '20px',
       fontSize: 24,
       fontWeight: 700,
-      color: '#646462'
+      color: '#646462',
     },
 
     icon: {
@@ -39,36 +39,19 @@ const useStyles = makeStyles(theme => {
       color: '#646462'
     },
 
-    title: {
-      margin: '0px -25px 10px',
-      padding: '0px 25px',
-      fontSize: 23,
-
-      '& div': {
-        marginBottom: -4,
-
-        '& span': {
-          paddingBottom: 25,
-          fontSize: 36,
-          fontWeight: 'bold',
-          wordWrap: 'normal',
-          color: 'var(--navy)',
-          lineHeight: 'normal',
-        },
-      },
-    },
-
     cardContent: {
-      height: '70%',
+      height: 'auto',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: '16px 16px 0px 16px !important'
+
     },
     
     form: {  
       position: 'relative',
       width: '100%',
-      padding: '0px 20px',
+      padding: '20px 20px',
       "& .MuiFormControl-root": {
         paddingBottom: '10px'
       },
