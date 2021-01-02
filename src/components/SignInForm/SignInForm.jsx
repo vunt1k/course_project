@@ -6,6 +6,19 @@ import * as Yup from 'yup';
 // Components
 import FormikInput from '../FormikInput';
 import { Button, Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  link: {
+    textDecoration: 'underline',
+    color: '#183f73',
+    fontFamily: 'roboto',
+    paddingTop: 15,
+    fontWeight: 500,
+    fontSize: 16
+  }
+});
 
 const initialValues = { email: '', password: '' };
 
@@ -20,6 +33,8 @@ const validationSchema = Yup.object().shape({
 });
 
 const SignInForm = ({ authError, className }) => {
+  const classes = useStyles();
+
   const onSubmit = (values, setSubmitting) => {
     setTimeout(() => {
       setSubmitting(false);
@@ -61,15 +76,19 @@ const SignInForm = ({ authError, className }) => {
       {({ values, handleSubmit, isSubmitting }) => (
         <form className={className} onSubmit={handleSubmit}>
           {renderForm(values)}
-          <Grid>
-            <Button 
-              size="large" 
-              variant="contained" 
-              color="primary"
-              type="submit"
-              disabled={isSubmitting}>
-                Вхід
-            </Button>
+          <Grid
+            container
+            direction="column"
+            alignItems="center">
+              <Button 
+                size="large" 
+                variant="contained" 
+                color="primary"
+                type="submit"
+                disabled={isSubmitting}>
+                  Вхід
+              </Button>
+              <Link to='/news' className={classes.link}>Ввійти як гість</Link>
           </Grid>
         </form>
       )}
