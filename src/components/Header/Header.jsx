@@ -39,10 +39,14 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display:"flex",
     justifyContent: 'space-between',
+    marginRight: 0,
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       flexDirection: 'column'
     },
+  },
+  headerText: {
+    textAlign: 'center',
   },
   actionButtons: {
     [theme.breakpoints.down('sm')]: {
@@ -77,8 +81,8 @@ const Header = ({openMenu}) => {
             >
               <MenuIcon />
             </IconButton>
-            <span className={classes.header}>
-              <Typography variant="h6" noWrap>
+            <Grid container className={classes.header}>
+              <Typography className={classes.headerText} variant="h6" noWrap>
                 Кінологічна спілка України
               </Typography>
               <span className={classes.actionButtons}>
@@ -87,7 +91,7 @@ const Header = ({openMenu}) => {
                 </Link>
                 <Button color="inherit">Реєстрація</Button>
               </span>
-            </span>
+            </Grid>
         </Grid>
       </Toolbar>
     </AppBar>
